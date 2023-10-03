@@ -16,3 +16,10 @@ factorial = function(num)
     end
 
 print(factorial(10))
+
+prettyFactorial = function(num)
+    local numberFactorialized = factorial(num)
+    return "The factorial of '"..num.."' is: "..numberFactorialized
+end
+
+print(prettyFactorial(10))
