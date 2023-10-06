@@ -1,6 +1,9 @@
 tablePrinter = function(table)
     local tLength = #table
     local returnString = "The elements in this table are: "
+    if(type(table ~= "table"))
+        then print("fuck you")
+    end
     do
         if (tLength ~= 0)
         then
