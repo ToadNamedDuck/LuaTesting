@@ -1,26 +1,27 @@
 tablePrinter = function(table)
-    local tLength = #table
     local returnString = "The elements in this table are: "
-    if(type(table ~= "table"))
-        then print("fuck you")
-    end
-    do
-        if (tLength ~= 0)
-        then
-            for i=1, tLength, 1
-            do 
-                if (i ~= tLength)
-                then returnString = returnString .. table[i] .. ", "
-                else
-                    returnString = returnString .. "and " .. table[i] .."."
-                end
-            end 
-        end
-    end
-    if(tLength == 0)
-    then print("There are no elements to print in the provided table!")
+    if(type(table)  ~= "table")
+        then print("You must provide a table for tablePrinter function to work properly!")
     else
-        print(returnString)
+        local tLength = #table
+        do
+            if (tLength ~= 0)
+            then
+                for i=1, tLength, 1
+                do 
+                    if (i ~= tLength)
+                    then returnString = returnString .. table[i] .. ", "
+                    else
+                        returnString = returnString .. "and " .. table[i] .."."
+                    end
+                end 
+            end
+        end
+        if(tLength > 0)
+            then print(returnString)
+        else
+            print("The table you provided has no elements!")
+        end 
     end
 end
 
